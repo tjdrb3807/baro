@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/coupon_Shell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/coupon_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/notosans_bold"
+            android:text="8월의 쿠폰"
+            android:textColor="#343434"
+            android:textSize="17sp"
+            android:includeFontPadding="false" />
+
+        <TextView
+            android:id="@+id/coupon_enddate"
+            android:layout_below="@id/coupon_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/notosans_bold"
+            android:text="2020년 8월 27일 까지"
+            android:textSize="12sp"
+            android:includeFontPadding="false"
+            android:textColor="#c4c4c4" />
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+            <TextView
+                android:fontFamily="@font/notosans_bold"
+                android:id="@+id/discount_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/coupon_type"
+                android:text="3000"
+                android:textColor="#343434"
+                android:textSize="17sp"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:fontFamily="@font/notosans_regular"
+                android:id="@+id/coupon_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text=" 원"
+                android:textColor="#343434"
+                android:textSize="17sp"
+                android:includeFontPadding="false" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"/>
+</LinearLayout>

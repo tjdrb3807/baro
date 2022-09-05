@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/top"
+        android:name="com.tpn.baro.Fragment.TopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        />
+    <com.naver.maps.map.MapView
+        android:layout_below="@id/top"
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/store_detail"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_margin="10dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/store_preview"
+            android:layout_width="128dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/plus"/>
+
+        <TextView
+            android:id="@+id/store_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/store_preview"
+            android:fontFamily="@font/notosans_black"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/store_title"
+            android:layout_toRightOf="@id/store_preview"
+            android:maxLines="2"
+            android:fontFamily="@font/notosans_regular"
+            android:textSize="12sp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/notosans_bold"
+            android:paddingRight="20dp"
+            android:textSize="13sp"
+            android:textAlignment="textEnd" />
+    </RelativeLayout>
+</RelativeLayout>

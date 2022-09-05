@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/cart_fragment_layout"
+    tools:context="com.tpn.baro.Fragment.BasketCart">
+    <ImageView
+        android:id="@+id/cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contextClickable="true"
+        android:scaleType="center"
+        android:layout_centerInParent="true"
+        android:src="@drawable/basket" />
+
+    <TextView
+        android:id="@+id/get_cart_session"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:translationX="7.5dp"
+        android:translationY="-5.5dp"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@color/main"
+        android:letterSpacing="-0.22"
+        android:textSize="9sp" />
+
+</RelativeLayout>

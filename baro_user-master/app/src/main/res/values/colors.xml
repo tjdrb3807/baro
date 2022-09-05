@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Android 2.0 Lollipop 에서 작동  -->
+    <color name="colorPrimary">#8333e6</color>
+    <color name="colorPrimaryDark">#40000000</color>
+    <color name="colorAccent">#40000000</color>
+
+
+    <color name="lightWhite">#f2f5f8</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#40000000</color>
+    <color name="lightGray">#E3E3E3</color>
+    <color name="lightGray2">#AFAFAF</color>
+    <color name="main">#8333e6</color>
+    <color name="text_info_color">#CCCCCC</color>
+    <color name="red">#ff0000</color>
+    <color name="orange">#FF5722</color>
+    <color name="more_bright_gray">#343434</color>
+    <color name="gray2">#3d3d3d</color>
+
+    <color name="bottom_icon_color_select">#8333e6</color>
+    <color name="map_marker_content_background">#CFFFFFFF</color>
+    <color name="dialog_invisible">#33000000</color>
+    <color name="invisible">#00000000</color>
+    <color name="border_gray">#c4c4c4</color>
+    <color name="indicator_unselect_text_color">#dbdbdb</color>
+
+    <color name="nearWhite">#FCF7FF</color>
+    <color name="littleGray">#EDEDED</color>
+    <color name="main_page_store_view_detail_color">#6d6d6d</color>
+
+    <color name="home_background">#D7D7D7</color>
+    <color name="transparent_color">#75828282</color>
+
+    <color name="main_store_recycler_view_text">#444444</color>
+</resources>

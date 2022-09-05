@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_alignParentTop="true"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:fontFamily="@font/notosans_black"
+        android:gravity="center"
+        android:text="장바구니 담기 완료"
+        android:textColor="#343434"
+        android:textSize="14sp" />
+
+
+
+    <TextView
+        android:layout_below="@id/title"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:textColor="#343434"
+        android:fontFamily="@font/notosans_regular"
+        android:textSize="12sp"
+        android:text="장바구니에 물건이 담겼습니다 \n 다른메뉴를 보시겠습니까?"/>
+
+
+    <LinearLayout
+        android:layout_below="@id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/goStore"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="다른메뉴 보기"
+            android:textColor="@color/main"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/layout_border_3dp_stroke_1dp"
+            android:fontFamily="@font/notosans_bold"
+            android:includeFontPadding="false"
+            />
+
+        <Button
+            android:id="@+id/goBasket"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="장바구니"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/menu_select"
+            android:fontFamily="@font/notosans_bold"
+            android:includeFontPadding="false"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.tpn.baro.MyPage">
+
+    <fragment
+        android:id="@+id/top_bar"
+        android:name="com.tpn.baro.Fragment.TopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_menu"
+        android:layout_below="@id/top_bar"
+        android:scrollbarSize="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/table_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/user_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="31dp"
+                    android:layout_marginStart="17dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/user_picture"
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:src="@drawable/my_page_profile" />
+
+                    <RelativeLayout
+                        android:layout_marginStart="20dp"
+                        android:layout_toRightOf="@id/user_picture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/user_name_space"
+                            android:layout_alignParentTop="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/notosans_bold"
+                            android:includeFontPadding="false"
+                            android:text="홍길동님"
+                            android:letterSpacing="-0.02"
+                            android:textColor="@color/more_bright_gray"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:layout_below="@id/user_name_space"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/notosans_regular"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/main_page_store_view_detail_color"
+                            android:textStyle="normal"
+                            android:letterSpacing="-0.03"
+                            android:textSize="10sp"
+                            android:text="sky_battle@naver.com"
+                            />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_below="@id/user_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="17dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/recycler_view_border_line"
+                    android:baselineAligned="false" android:orientation="horizontal"
+                    android:weightSum="9">
+
+                    <RelativeLayout
+                        android:id="@+id/order_history_button"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="3">
+                        <TextView
+                            android:id="@+id/order_history_button_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/notosans_bold"
+                            android:includeFontPadding="false"
+                            android:letterSpacing="-0.03"
+                            android:textColor="@color/more_bright_gray"
+                            android:textSize="11sp"
+                            android:text="주문내역"
+                            />
+                        <TextView
+                            android:id="@+id/order_history_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/order_history_button_title"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/notosans_regular"
+                            android:includeFontPadding="false"
+                            android:text="0"
+                            android:textSize="11sp"
+                            android:textStyle="normal"
+                            android:letterSpacing="-0.03"
+                            android:textColor="@color/main" />
+
+                        <View
+                            android:id="@+id/side_line1"
+                            android:layout_width="0.5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/order_history_button_title"
+                            android:layout_alignBottom="@id/order_history_count"
+                            android:layout_alignParentEnd="true"
+                            android:background="@color/border_gray" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/my_coupon_button"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="3">
+
+                        <TextView
+                            android:id="@+id/my_coupon_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:text="내 쿠폰"
+                            android:fontFamily="@font/notosans_bold"
+                            android:includeFontPadding="false"
+                            android:textStyle="normal"
+                            android:letterSpacing="-0.03"
+                            android:textColor="@color/more_bright_gray"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/my_coupon_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/my_coupon_title"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/notosans_regular"
+                            android:includeFontPadding="false"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="normal"
+                            android:letterSpacing="-0.03"
+                            android:text="0"
+                            android:textSize="11sp"
+                            android:textColor="@color/main" />
+
+                        <View
+                            android:id="@+id/side_lin2"
+                            android:layout_width="0.5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/my_coupon_title"
+                            android:layout_alignBottom="@id/my_coupon_count"
+                            android:layout_alignParentEnd="true"
+                            android:background="@color/border_gray" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/my_order_cart_button"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="3">
+
+                        <TextView
+                            android:id="@+id/my_order_cart_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/notosans_bold"
+                            android:includeFontPadding="false"
+                            android:text="장바구니"
+                            android:letterSpacing="-0.03"
+                            android:textColor="@color/more_bright_gray"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/my_order_cart_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/my_order_cart_title"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/notosans_regular"
+                            android:includeFontPadding="false"
+                            android:layout_marginTop="5dp"
+                            android:text="0"
+                            android:textSize="11sp"
+                            android:textStyle="normal"
+                            android:letterSpacing="-0.03"
+                            android:textColor="@color/main" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <View
+                android:id="@+id/table_size_bottom_line"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="@color/home_background"
+                android:layout_below="@id/table_size"
+                android:layout_marginTop="14dp"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/menu_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/table_size_bottom_line"
+                />
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/menu_list"
+                android:layout_marginBottom="20dp"
+                android:background="@color/white"
+                android:text="로그아웃"
+                android:textAlignment="center"
+                android:textColor="@color/red" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <fragment
+        android:id="@+id/cart_click_button"
+        android:name="com.tpn.baro.Fragment.BasketCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_menu"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="@dimen/order_list_cart_dp" />
+
+    <fragment
+        android:id="@+id/bottom_menu"
+        android:name="com.tpn.baro.Fragment.BottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

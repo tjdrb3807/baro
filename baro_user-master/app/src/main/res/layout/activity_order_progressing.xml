@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/top_bar"
+        android:name="com.tpn.baro.Fragment.TopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+<!--    <com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout-->
+<!--        android:id="@+id/refresh_list"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@id/bottom_menu"-->
+<!--        android:layout_below="@id/top_bar"-->
+<!--        android:layout_marginTop="3dp"-->
+<!--        android:layout_marginBottom="-3dp"-->
+<!--        app:srl_direction="bottom"-->
+<!--        >-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/orderProgresslist"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_above="@id/bottom_menu"-->
+<!--            android:layout_below="@id/top_bar"-->
+<!--            android:layout_marginTop="3dp"-->
+<!--            android:layout_marginBottom="-3dp"-->
+<!--            android:background="@color/white" />--> 원본 아래껀 refresh지우기위해
+<!--    </com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout>-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/orderProgresslist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_menu"
+        android:layout_below="@id/top_bar"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="-3dp"
+        android:background="@color/white" />
+    <fragment
+        android:id="@+id/cart_click_button"
+        android:name="com.tpn.baro.Fragment.BasketCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="80dp" />
+
+    <fragment
+        android:id="@+id/bottom_menu"
+        android:name="com.tpn.baro.Fragment.BottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize="0dp"
+        android:fillViewport="true"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <fragment
+            android:id="@+id/map"
+            class="com.naver.maps.map.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+
+            />
+        <RelativeLayout
+            android:layout_below="@id/map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/store_title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/store_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="가게소개"
+                    android:textColor="#343434"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/notosans_black"
+                    android:includeFontPadding="false"/>
+
+                <TextView
+                    android:layout_below="@id/store_title"
+                    android:id="@+id/store_infomation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="많은 양과 낮은 가격 메머드에 중독되다"
+                    android:textSize="15sp"
+                    android:textColor="#343434"
+                    android:fontFamily="@font/notosans_regular"
+                    android:includeFontPadding="false"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/events_benefits_layout"
+                android:layout_below="@id/store_title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/events_benefits_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="안내/혜택"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_below="@id/events_benefits_title"
+                    android:id="@+id/events_benefits_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- 콜롬비아 원두콩 ~~" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@id/events_benefits_layout"
+                android:id="@+id/store_workout_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/store_info_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="영업정보"
+                        android:textColor="#343434"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/notosans_black"
+                        android:includeFontPadding="false"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="운영시간 : "
+                            android:textSize="13sp"
+                            android:textColor="#343434"
+                            android:fontFamily="@font/notosans_bold"
+                            android:includeFontPadding="false"/>
+
+                        <TextView
+                            android:id="@+id/open_close"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="09:00 ~ 21:00"
+                            android:textAlignment="center"
+                            android:textSize="13sp"
+                            android:textColor="#343434"
+                            android:fontFamily="@font/notosans_regular"
+                            android:includeFontPadding="false"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="휴무일 : "
+                            android:textSize="13sp"
+                            android:textColor="#343434"
+                            android:fontFamily="@font/notosans_bold"
+                            android:includeFontPadding="false"/>
+
+                        <TextView
+                            android:id="@+id/days_off"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="매주 월, 금 "
+                            android:textSize="13sp"
+                            android:textColor="#343434"
+                            android:fontFamily="@font/notosans_regular"
+                            android:includeFontPadding="false"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="전화번호 : "
+                            android:textSize="13sp"
+                            android:textColor="#343434"
+                            android:fontFamily="@font/notosans_bold"
+                            android:includeFontPadding="false"/>
+
+                        <TextView
+                            android:id="@+id/store_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="02-882-9592"
+                            android:textSize="13sp"
+                            android:textColor="#343434"
+                            android:fontFamily="@font/notosans_regular"
+                            android:includeFontPadding="false"/>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="가게 위치 : "
+                            android:textSize="13sp"
+                            android:textColor="#343434"
+                            android:fontFamily="@font/notosans_bold"
+                            android:includeFontPadding="false"/>
+                        <TextView
+                            android:id="@+id/store_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="서울시 성북구 종암로 25길 30"
+                            android:textSize="13sp"
+                            android:textColor="#343434"
+                            android:fontFamily="@font/notosans_regular"
+                            android:includeFontPadding="false"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_below="@id/store_workout_info"
+                android:id="@+id/representative_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                >
+                <TextView
+                    android:id="@+id/representative_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사업자 정보"
+                    android:textSize="15sp"
+                    android:textColor="#343434"
+                    android:fontFamily="@font/notosans_black"
+                    android:includeFontPadding="false"
+                    android:layout_marginBottom="10dp"
+                    />
+                <TextView
+                    android:layout_below="@id/representative_title"
+                    android:id="@+id/representative_name_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="대표자명 : "
+                    android:textSize="13sp"
+                    android:textColor="#343434"
+                    android:fontFamily="@font/notosans_bold"
+                    android:includeFontPadding="false"
+                    android:layout_marginBottom="10dp"
+                    />
+                <TextView
+                    android:id="@+id/representative_name_content"
+                    android:layout_toEndOf="@id/representative_name_title"
+                    android:layout_alignTop="@id/representative_name_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사업자 이름"
+                    android:textSize="13sp"
+                    android:textColor="#343434"
+                    android:fontFamily="@font/notosans_regular"
+                    android:includeFontPadding="false"
+                    android:layout_marginBottom="10dp"
+                    />
+                <TextView
+
+                    android:layout_below="@id/representative_name_title"
+                    android:id="@+id/representative_phone_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="전화번호 : "
+                    android:textSize="13sp"
+                    android:textColor="#343434"
+                    android:fontFamily="@font/notosans_bold"
+                    android:includeFontPadding="false"
+                    />
+                <TextView
+                    android:id="@+id/representative_phone_content"
+                    android:layout_toEndOf="@id/representative_phone_title"
+                    android:layout_alignTop="@id/representative_phone_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사업자 이름"
+                    android:textSize="13sp"
+                    android:textColor="#343434"
+                    android:fontFamily="@font/notosans_regular"
+                    android:includeFontPadding="false"
+                    android:layout_marginBottom="10dp"
+                    />
+                <TextView
+                    android:layout_below="@id/representative_phone_title"
+                    android:id="@+id/representative_number_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사업자 전화번호"
+                    android:textSize="13sp"
+                    android:textColor="#343434"
+                    android:fontFamily="@font/notosans_bold"
+                    android:includeFontPadding="false"
+                    />
+                <TextView
+                    android:id="@+id/representative_number_content"
+                    android:layout_toEndOf="@id/representative_number_title"
+                    android:layout_alignTop="@id/representative_number_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사업자 번호"
+                    android:textSize="13sp"
+                    android:textColor="#343434"
+                    android:fontFamily="@font/notosans_regular"
+                    android:includeFontPadding="false"
+                    android:layout_marginBottom="10dp"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

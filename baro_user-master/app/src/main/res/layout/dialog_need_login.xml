@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/outSide"
+    >
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_need_login"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/notosans_regular"
+            android:includeFontPadding="false"
+            android:text="로그인이 필요합니다"
+            android:textColor="#434343"
+            android:textSize="17sp" />
+
+        <ImageButton
+            android:id="@+id/dismiss"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:src="@drawable/close_button" />
+
+        <TextView
+            android:id="@+id/subTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginVertical="15dp"
+            android:fontFamily="@font/notosans_regular"
+            android:includeFontPadding="false"
+            android:text="서비스를 이용하기 위해서는 로그인이 필요합니다."
+            android:textColor="#343434"
+            android:textSize="15sp" />
+        <Button
+            android:layout_below="@id/subTitle"
+            android:id="@+id/goLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_border_5dp_stroke_2dp_main"
+            android:text="로그인 하기"
+            android:textColor="@color/white"
+            android:fontFamily="@font/notosans_regular"
+            />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
